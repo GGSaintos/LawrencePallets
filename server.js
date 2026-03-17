@@ -32,14 +32,18 @@ transporter.verify((error) => {
 });
 
 app.get("/", (req, res) => {
+  console.log("GET /");
   res.render("index");
 });
 
 app.get("/quote", (req, res) => {
+  console.log("GET /quote");
   res.render("quote", { success: null });
 });
 
 app.post("/quote", async (req, res) => {
+  console.log("POST /quote", req.body);
+
   const { businessName, email, phone, productInterest, notes, company } = req.body;
   const phoneRegex = /^[0-9]+$/;
 
@@ -52,11 +56,9 @@ app.post("/quote", async (req, res) => {
   }
 
   try {
-    // email to business
     const businessInfo = await transporter.sendMail({
       from: `"Lawrence Pallet Website" <${process.env.YAHOO_USER}>`,
       to: "lawrencepallets@verizon.net",
-      replyTo: email,
       subject: "New Pallet Quote Request",
       text: `
 New Quote Request
@@ -75,7 +77,6 @@ ${notes || "N/A"}
 
     console.log("BUSINESS EMAIL SENT:", businessInfo.response);
 
-    // confirmation email to actual customer
     try {
       const customerInfo = await transporter.sendMail({
         from: `"Lawrence Pallet" <${process.env.YAHOO_USER}>`,
@@ -110,5 +111,5 @@ Lawrence Pallet
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
