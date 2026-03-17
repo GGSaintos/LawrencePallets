@@ -1,0 +1,15 @@
+{
+  "name": "lawrence-pallets",
+  "version": "1.0.0",
+  "description": "Lawrence Pallet website built with Node, Express, and Pug",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Gilir Gabinete",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pug": "^3.0.2"
+  }
+}

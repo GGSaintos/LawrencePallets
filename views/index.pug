@@ -1,0 +1,85 @@
+extends layout
+
+block content
+  section.hero-slideshow
+    .slideshow
+      img.slide(src="/images/p1.webp", alt="Pallet slideshow image 1")
+      img.slide(src="/images/p2.webp", alt="Pallet slideshow image 2")
+
+    .hero-overlay
+      .hero-content
+        h2.hero-title Lower with Lawrence!
+        p.hero-subtitle Affordable, durable, and eco-friendly pallet solutions for all industries.
+        a.hero-button(href="/quote") Request a Quote
+
+  section#about.about-section
+    .section-container
+      h2.section-title Why Choose Lawrence Pallet?
+      .about-card
+        h3.about-heading Hudson County's Most Reliable Pallet Supplier!
+        p.about-text
+          | Lawrence Pallet has been providing affordable and top-quality pallets
+          |  to customers for nearly 30 years. We serve logistics, warehousing,
+          |  distribution, and manufacturing businesses with dependable pallet solutions.
+
+  section#products.products-section
+    .section-container
+      h2.section-title Explore Our Durable Pallet Selection
+      .product-grid
+        .product-card
+          h3 48" x 40" Wooden Pallets
+          p Strong, dependable standard pallets for shipping and warehouse use.
+        .product-card
+          h3 48" x 40" Plastic Pallets
+          p Reusable and durable pallets designed for cleaner, long-term handling.
+        .product-card
+          h3 4-Way Wooden Pallets
+          p Easy forklift access and ideal for flexible loading environments.
+        .product-card
+          h3 Euro Pallets
+          p Efficient pallet format for international transport and storage.
+        .product-card
+          h3 42" x 42" Pallets
+          p Compact pallet option for specialty inventory and warehouse movement.
+        .product-card
+          h3 Custom Sizes Available
+          p Ask us about additional sizes and options to fit your business needs.
+
+  section#contact.contact-section
+    .section-container.contact-layout
+      .contact-info
+        h2.section-title Contact Us
+        h3.contact-heading Give Us A Visit!
+        p.contact-text
+          | For any inquiries, feel free to give us a call or visit our North Bergen location.
+
+        h3.contact-heading Lawrence Pallet
+        p.contact-text
+          a(
+            href="https://maps.google.com/?q=1000+Dell+Avenue+North+Bergen+NJ+07047"
+            target="_blank"
+            rel="noopener noreferrer"
+          ) 1000 Dell Avenue, North Bergen, New Jersey 07047, United States
+
+        p.contact-text
+          | Lawrence Gichan
+          br
+          | Tel:
+          a(href="tel:2013303222")  201-330-3222
+          br
+          | Email:
+          a(href="mailto:lawrencepallets@verizon.net")  lawrencepallets@verizon.net
+
+        h3.contact-heading Hours
+        p.contact-text Monday - Friday: 9:00 AM – 5:00 PM
+
+      .contact-map
+        iframe(
+          src="https://www.google.com/maps?q=1000+Dell+Avenue+North+Bergen+NJ+07047&output=embed"
+          width="100%"
+          height="420"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        )

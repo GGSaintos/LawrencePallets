@@ -1,0 +1,1 @@
+console.log("Lawrence Pallet site loaded.");

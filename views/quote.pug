@@ -1,0 +1,72 @@
+extends layout
+
+block content
+  section.quote-hero
+    .section-container
+      h1.quote-title Request a Quote
+      p.quote-subtitle Lower With Lawrence!
+
+  section.quote-page
+    .section-container
+      .quote-grid
+
+        .quote-form-card
+          h3.form-title Please Provide Your Contact Information
+
+          form(method="POST" action="/quote")
+            label Business Name*
+            input(type="text" name="businessName" required)
+
+            label Email*
+            input(type="email" name="email" required)
+
+            label Phone*
+            input(
+              type="tel"
+              name="phone"
+              required
+              pattern="[0-9]+"
+              inputmode="numeric"
+              placeholder="2013303222"
+              title="Please enter numbers only"
+            )
+
+            label Which Product Are You Interested In?
+            textarea(name="productInterest" rows="4")
+
+            label Other Notes
+            textarea(name="notes" rows="4")
+
+            input(type="text" name="company" style="display:none")
+
+            button.quote-submit(type="submit") Send
+
+          if success === true
+            p.quote-success Request has been sent successfully!
+          if success === false
+            p.quote-error Please check your required fields and try again.
+
+        .quote-info-card
+          h3 WE ARE ONE PHONE CALL AWAY!
+
+          p
+            | For quick inquiries, give us a call and feel free
+            | to visit our North Bergen location.
+
+          h3 Lawrence Pallet
+
+          p
+            a(
+              href="https://maps.google.com/?q=1000+Dell+Avenue+North+Bergen+NJ+07047"
+              target="_blank"
+              rel="noopener noreferrer"
+            ) 1000 Dell Avenue, North Bergen, New Jersey
+
+          p
+            | Lawrence Gichan
+            br
+            | Tel:
+            a(href="tel:2013303222") 201-330-3222
+            br
+            | Email:
+            a(href="mailto:lawrencepallets@verizon.net") lawrencepallets@verizon.net
