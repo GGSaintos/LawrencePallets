@@ -213,6 +213,8 @@ img {
   padding: 90px 24px;
 }
 
+
+
 .section-title {
   margin: 0 0 42px;
   text-align: center;
@@ -512,19 +514,38 @@ letter-spacing:2px;
 
 .quote-page{
 padding:60px 20px 120px;
+
 }
 
-.quote-grid{
-display:grid;
+.quote-page .section-container {
+  display: flex;
+  justify-content: center;
+}
+.quote-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
 
-grid-template-columns:2fr 1fr;
-gap:40px;
+
+.quote-grid {
+  max-width: 500px;
+  width: 100%;
+}
+
+.quote-info-card {
+  text-align: center;
+  margin-top: -205px;
 }
 
 
 
 /* Cards */
-
+.quote-form-card {
+  margin: 0 auto;
+  margin-top: -100px;
+}
 .quote-form-card,
 .quote-info-card{
 background:#f6f6f6;
@@ -532,8 +553,16 @@ color: black;
 padding:40px;
 border-radius:12px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
 
+
+
+.quote-info-card {
+  background: transparent;
+  color: white;
+
+}
 /* Form */
 
 .quote-form-card label{
@@ -542,13 +571,18 @@ margin-top:20px;
 font-weight:600;
 }
 
+.quote-form-card {
+  color:black;
+  justify-content: center;
+}
+
 .quote-form-card input,
 .quote-form-card textarea{
 width:100%;
 padding:14px;
 margin-top:6px;
-border:2px solid #111;
-border-radius:8px;
+border:2px solid #000000;
+border-radius:1px;
 }
 
 .quote-submit{
